@@ -12,6 +12,9 @@ spec:
     spec:
       $setElementOrder/containers:
       - name: podinfod
+      - name: nginx
       containers:
-      - image: quay.io/stefanprodan/podinfo:1.7.0
+      - image: quay.io/stefanprodan/podinfo:1.7.4
         name: podinfod
+      - image: nginx:1-alpine-perl
+        name: nginx
