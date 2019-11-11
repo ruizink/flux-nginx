@@ -1,0 +1,17 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    flux.weave.works/automated: "true"
+    flux.weave.works/tag.podinfod: semver:~1.7
+  name: nginx
+  namespace: nginx
+spec:
+  template:
+    spec:
+      $setElementOrder/containers:
+      - name: podinfod
+      containers:
+      - image: quay.io/stefanprodan/podinfo:1.7.0
+        name: podinfod
