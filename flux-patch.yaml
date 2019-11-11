@@ -5,4 +5,4 @@ metadata:
   annotations:
     flux.weave.works/automated: "true"
   name: nginx-deployment
-namespace: nginx-sample
+  namespace: nginx-sample
