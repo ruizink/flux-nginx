@@ -7,14 +7,3 @@ metadata:
     flux.weave.works/tag.podinfod: semver:~1.7
   name: nginx-deployment
   namespace: flux-nginx
-spec:
-  template:
-    spec:
-      $setElementOrder/containers:
-      - name: podinfod
-      - name: nginx
-      containers:
-      - image: quay.io/stefanprodan/podinfo:1.7.4
-        name: podinfod
-      - image: nginx:1-alpine-perl
-        name: nginx
