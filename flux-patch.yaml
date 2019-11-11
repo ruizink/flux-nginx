@@ -6,3 +6,11 @@ metadata:
     flux.weave.works/automated: "true"
   name: nginx-deployment
   namespace: nginx-sample
+spec:
+  template:
+    spec:
+      $setElementOrder/containers:
+      - name: nginx
+      containers:
+      - image: nginx:1-alpine-perl
+        name: nginx
