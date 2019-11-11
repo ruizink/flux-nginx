@@ -4,14 +4,5 @@ kind: Deployment
 metadata:
   annotations:
     flux.weave.works/automated: "true"
-    flux.weave.works/tag.podinfod: semver:~1.7
   name: nginx-deployment
   namespace: flux-nginx
-spec:
-  template:
-    spec:
-      $setElementOrder/containers:
-      - name: nginx
-      containers:
-      - image: nginx:1-alpine-perl
-        name: nginx
