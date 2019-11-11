@@ -5,8 +5,8 @@ metadata:
   annotations:
     flux.weave.works/automated: "true"
     flux.weave.works/tag.podinfod: semver:~1.7
-  name: nginx
-  namespace: nginx
+  name: nginx-deployment
+  namespace: flux-nginx
 spec:
   template:
     spec:
